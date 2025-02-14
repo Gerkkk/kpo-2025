@@ -26,7 +26,8 @@ public class ConsoleApp {
         System.out.println("Enter any of available commands");
 
         while (true) {
-            String input = scanner.nextLine();
+            System.out.print("> ");
+            var input = scanner.nextLine();
             String result = commandParser.parseCommandLine(input.split(" "));
 
             if ("exit".equals(result)) {

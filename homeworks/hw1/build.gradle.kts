@@ -3,6 +3,7 @@ plugins {
     id("org.springframework.boot") version "3.4.2"
     id("io.spring.dependency-management") version "1.1.7"
     jacoco
+    application
 }
 
 group = "org.example"
@@ -32,4 +33,15 @@ tasks.jacocoTestReport {
 
 tasks.withType<Test> {
     useJUnitPlatform()
+}
+
+tasks.jar {
+    manifest {
+        attributes["Main-Class"] = "erp.ConsoleApp" // Укажите ваш главный класс
+    }
+}
+
+
+application {
+    mainClass = "erp.ConsoleApp"
 }
