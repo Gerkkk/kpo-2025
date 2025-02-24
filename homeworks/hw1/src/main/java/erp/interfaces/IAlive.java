@@ -1,6 +1,20 @@
 package erp.interfaces;
-//TODO: Ask
+
+/**
+ * Интерфейс живого существа.
+ */
 public interface IAlive {
-    public int food = 0;
-    public int getFood();
+    int food = 0;
+
+    /**
+     * Метод возвращающий потребляемое животным число еды.
+     * @return потребляемое животным число еды в кг
+     */
+    int getFood();
+
+    /**
+     * Метод устанавливающий потребляемое животным число еды.
+     * @param food - новое число еды потребляемое животным в кг
+     */
+    void setFood(int food);
 }
